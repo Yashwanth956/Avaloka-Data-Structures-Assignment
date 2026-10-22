@@ -53,17 +53,13 @@ class LRUCache:
         self.cache[key] = node
         self._add_recent(node)
 
-
 import heapq
-
-
 def can_attend_all(events):
     meetings = sorted(events)
     for i in range(1, len(meetings)):
         if meetings[i][0] < meetings[i - 1][1]:
             return False
     return True
-
 
 def min_rooms_required(events):
     meetings = sorted(events)
@@ -79,8 +75,7 @@ def min_rooms_required(events):
         max_rooms = max(max_rooms, len(end_times))
 
     return max_rooms
-
-
+    
 if __name__ == "__main__":
     cache = LRUCache(2)
     cache.put(1, 10)
