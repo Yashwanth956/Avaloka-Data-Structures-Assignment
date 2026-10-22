@@ -136,7 +136,7 @@ def test_event_randomized():
         expected = oracle_rooms(events)
         check(min_rooms_required(events), expected, f'rooms randomized {index}: {events}')
         check(can_attend_all(events), expected <= 1, f'attend randomized {index}: {events}')
-
+        
 def test_performance_smoke():
     # Not a formal benchmark/proof; covers large inputs for obvious slowdowns.
     cache = LRUCache(10000)
